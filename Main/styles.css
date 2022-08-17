@@ -1,6 +1,93 @@
-body{
-    background-color: rgb(24, 24, 24);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    background-color: black;
+    font-family: 'Rockwell', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
 
+
+
+
+.defaultSpacer {
+    width: 100%;
+    height: 10px;
+
+}
+
+.header {
+
+    position: relative;
+}
+
+.navbarLine {
+    position: absolute;
+    top: 1.4em;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    margin-left: 16em;
+}
+
+.navName {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.navbarButtons {
+    width: 99%;
+    top: 5%;
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.navSpacer {
+    content: " ";
+    width: 1em;
+    height: fit-content;
+}
+
+.navButton {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: .3em;
+    background-color: black;
+    border: .2em solid white;
+    width: fit-content;
+    height: 1em;
+
+}
+
+.navButton p{
+    position: relative;
+    top: -1.3em;
+    padding: 0;
+    margin: 0;
+}
+
+.navButton::before {
+    position: relative;
+    z-index: -1;
+    content: "";
+    top: -1.7em;
+    left: 40%;
+    padding: .2em;
+    background-color: white;
+    width: fit-content;
+    height: 10em;
+}
+
+.navButton::after {
+    margin-right: .2em;
+    content: "";
+}
+
+
+
+.navButton:hover {
+    position: relative;
+    top: 10px;
+    transition-duration: 1s;
+}
