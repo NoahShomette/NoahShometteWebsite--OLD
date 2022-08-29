@@ -18,14 +18,18 @@ jobs:
     name: deploy
     steps:
     
-    - name: Simple SFTP
-    # You may pin to the exact commit or the version.
-    # uses: Atyn/simple-sftp-action@a684a17fdd2b79d23101d568d9e8b5070f58e685
-      uses: Atyn/simple-sftp-action@0.0.2
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: deploy file
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        # URL to the SFTP server. Example: sftp://USERNAME:PASSWORD@example.com/remote-directory
-        url: sftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@${{ secrets.FTP_SERVER }}/Main
-        # The directory that should be uploaded
-        localdir: "Main/**"
+          username: ${{ secrets.FTP_USERNAME }}
+          server:  ${{ secrets.FTP_SERVER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_path: "Main/**"
+          remote_path: "/Main"
+          port: 2222
+          sftpArgs: '-o ConnectTimeout=5'
+          sftp_only: true
     
 
