@@ -1,6 +1,185 @@
-body{
-    background-color: rgb(24, 24, 24);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    background-color: black;
+    font-family: 'Rockwell', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+
+    --default-background-color: black;
+    --default-foreground-color: white;
+
 }
 
+
+
+
+
+
+.defaultSpacer {
+    width: 100%;
+    height: .7em;
+
+}
+
+.sectionBodySpacer {
+    width: 100%;
+    height: 10em;
+}
+
+.header {
+
+    position: relative;
+}
+
+#navLineHolder {
+
+    position: absolute;
+    top: 1em;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.navbarLine {
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    margin-left: 12em;
+}
+
+.navName {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.navbarButtons {
+    width: 99%;
+    top: 1%;
+    display: flex;
+    position: fixed;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.navSpacer {
+    content: " ";
+    width: 1em;
+    height: fit-content;
+}
+
+.navButton {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: .3em;
+    background-color: black;
+    border: .2em solid white;
+    width: fit-content;
+    height: 1em;
+    box-shadow: .5em .5em .5em black;
+}
+
+.navButton p {
+    position: relative;
+    top: -1.3em;
+    padding: 0;
+    margin: 0;
+}
+
+.navButton::before {
+    position: relative;
+    z-index: -1;
+    content: "";
+    top: -1.7em;
+    left: 40%;
+    padding: .2em;
+    background-color: white;
+    width: fit-content;
+    height: 10em;
+}
+
+
+.navButton:hover {
+    position: relative;
+    margin-top: 20;
+
+    top: 10px;
+    transition-duration: 1s;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.sectionBody {
+    display: flex;
+    width: 80%;
+    height: 50em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.sectionBody h3{
+    font-size: x-large;
+}
+.sectionBody h2{
+    font-size: xx-large;
+}
+
+.sectionTitleHolder {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.sectionNumber {
+    background-color: black;
+    border: .2em solid white;
+    padding: .2em;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.zeroZeroBodyHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainPic {
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+    border: .3em solid white;
+    box-shadow: .5em .5em .5em black;
+    background-color: black;
+    z-index: 1;
+}
+
+.mainPic img {
+    width: 15em;
+    height: auto;
+    border-radius: 100%;
+    border: .4em solid black;
+}
+
+.zerZeroContentHolder {
+    position: relative;
+    width: 30em;
+    height: fit-content;
+    border: .2em solid white;
+    padding: .1em .8em .1em 5.8em;
+    left: -4em;
+    z-index: -1;
+}
+
+.zerZeroContentHolder p {
+    font-size: x-large;
+}
