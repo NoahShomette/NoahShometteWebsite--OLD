@@ -26,7 +26,7 @@ jobs:
           server:  ${{ secrets.FTP_SERVER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local_path: "Main/*"
-          remote_path: "/main"
+          remote_path: "/Main"
           port: 2222
           sftpArgs: '-o ConnectTimeout=5'
           sftp_only: true
